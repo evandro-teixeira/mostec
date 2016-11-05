@@ -29,6 +29,8 @@
  */
 
 #include "MKL25Z4.h"
+#include "gpio.h"
+#include "adc.h"
 
 static int i = 0;
 
