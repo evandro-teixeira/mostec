@@ -2,4 +2,4 @@ UserPEpath=C\:\\ProgramData\\Processor Expert\\PEXDRV_PE5_3
 UserPEpath_Default=C\:\\ProgramData\\Processor Expert\\CWMCU_PE5_00
 eclipse.preferences.version=1
 localPEpath=C\:\\Freescale\\KDS_3.0.0\\eclipse\\ProcessorExpert
-localPEpath_Default=C\:\\Freescale\\KDS_3.0.0\\eclipse\\ProcessorExpert
+localPEpath_Default=C\:\\Freescale\\CW MCU v10.6.4\\MCU\\ProcessorExpert

@@ -1,0 +1,27 @@
+#include "main.h"
+
+int main(void)
+{
+	int counter = 0;
+	rgb_init();
+	EnableInterrupts;
+	enable_irq(INT_UART0 -16);
+	set_irq_priority((INT_UART0 -16), 2);
+	
+	put("\r\nProjeto Mostec 2016");
+	put("\r\nKiT de Automação");
+	
+	
+	
+	while(TRUE)
+	{
+		counter++;
+		if(counter >= DLY)
+		{
+			GREEN_TOGGLE;
+			counter = 0;
+		}
+	}
+	
+	return 0;
+}

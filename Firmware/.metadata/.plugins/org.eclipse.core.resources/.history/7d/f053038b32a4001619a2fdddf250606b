@@ -1,0 +1,25 @@
+#include "main.h"
+
+int main(void)
+{
+	rgb_init();
+	int counter = 0;
+	
+	put("\r\nHello World! UART Lab using Interrupt mode\r\n");
+	
+	EnableInterrupts;
+	enable_irq(INT_UART0 -16);
+	set_irq_priority((INT_UART0 -16), 2);
+	
+	while(TRUE)
+	{
+		counter++;
+		if(counter >= DLY)
+		{
+			GREEN_TOGGLE;
+			counter = 0;
+		}
+	}
+	
+	return 0;
+}

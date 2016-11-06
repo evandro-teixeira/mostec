@@ -1,0 +1,38 @@
+C:\Users\Microgenios\AppData\Local\Temporary Projects\TerminalSerialDemo\bin\Debug\TerminalSerialDemo.exe
+C:\Users\Microgenios\AppData\Local\Temporary Projects\TerminalSerialDemo\bin\Debug\TerminalSerialDemo.pdb
+C:\Users\Microgenios\AppData\Local\Temporary Projects\TerminalSerialDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Microgenios\AppData\Local\Temporary Projects\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.TerminalSerial.resources
+C:\Users\Microgenios\AppData\Local\Temporary Projects\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.Properties.Resources.resources
+C:\Users\Microgenios\AppData\Local\Temporary Projects\TerminalSerialDemo\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Microgenios\AppData\Local\Temporary Projects\TerminalSerialDemo\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Microgenios\AppData\Local\Temporary Projects\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.exe
+C:\Users\Microgenios\AppData\Local\Temporary Projects\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.pdb
+C:\Users\Microgenios\Desktop\CursoOnline_C#_v01\TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.exe
+C:\Users\Microgenios\Desktop\CursoOnline_C#_v01\TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.pdb
+C:\Users\Microgenios\Desktop\CursoOnline_C#_v01\TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Microgenios\Desktop\CursoOnline_C#_v01\TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.TerminalSerial.resources
+C:\Users\Microgenios\Desktop\CursoOnline_C#_v01\TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.Properties.Resources.resources
+C:\Users\Microgenios\Desktop\CursoOnline_C#_v01\TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Microgenios\Desktop\CursoOnline_C#_v01\TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Microgenios\Desktop\CursoOnline_C#_v01\TerminalSerialDemo\TerminalSerialDemo\bin\Debug\TerminalSerialDemo.exe
+C:\Users\Microgenios\Desktop\CursoOnline_C#_v01\TerminalSerialDemo\TerminalSerialDemo\bin\Debug\TerminalSerialDemo.pdb
+C:\Users\Microgenios\Desktop\CursoOnline_C#_v01\TerminalSerialDemo\TerminalSerialDemo\bin\Debug\LCD.dll
+C:\Users\Microgenios\Desktop\09 - Curso de C#\Curso C#\Laboratórios C#\DIA1\TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.exe
+C:\Users\Microgenios\Desktop\09 - Curso de C#\Curso C#\Laboratórios C#\DIA1\TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.pdb
+C:\Users\Silvio\Desktop\Microgenios\DIA1\LAB23_a_27_TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.exe
+C:\Users\Silvio\Desktop\Microgenios\DIA1\LAB23_a_27_TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.pdb
+C:\Users\Silvio\Desktop\Microgenios\DIA1\LAB23_a_27_TerminalSerialDemo\TerminalSerialDemo\bin\Debug\TerminalSerialDemo.exe
+C:\Users\Silvio\Desktop\Microgenios\DIA1\LAB23_a_27_TerminalSerialDemo\TerminalSerialDemo\bin\Debug\TerminalSerialDemo.pdb
+C:\Users\Silvio\Desktop\Microgenios\DIA1\LAB23_a_27_TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Silvio\Desktop\Microgenios\DIA1\LAB23_a_27_TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.TerminalSerial.resources
+C:\Users\Silvio\Desktop\Microgenios\DIA1\LAB23_a_27_TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.Properties.Resources.resources
+C:\Users\Silvio\Desktop\Microgenios\DIA1\LAB23_a_27_TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Silvio\Desktop\Microgenios\DIA1\LAB23_a_27_TerminalSerialDemo\TerminalSerialDemo\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Silvio\Desktop\SerialMES\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.TerminalSerial.resources
+C:\Users\Silvio\Desktop\SerialMES\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.csproj.GenerateResource.Cache
+C:\Users\Silvio\Desktop\SerialMES\TerminalSerialDemo\bin\Debug\SerialMES.exe
+C:\Users\Silvio\Desktop\SerialMES\TerminalSerialDemo\bin\Debug\SerialMES.pdb
+C:\Users\Silvio\Desktop\SerialMES\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.csprojResolveAssemblyReference.cache
+C:\Users\Silvio\Desktop\SerialMES\TerminalSerialDemo\obj\x86\Debug\SerialMES.Properties.Resources.resources
+C:\Users\Silvio\Desktop\SerialMES\TerminalSerialDemo\obj\x86\Debug\SerialMES.exe
+C:\Users\Silvio\Desktop\SerialMES\TerminalSerialDemo\obj\x86\Debug\SerialMES.pdb

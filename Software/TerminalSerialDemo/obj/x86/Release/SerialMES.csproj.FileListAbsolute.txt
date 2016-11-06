@@ -1,0 +1,8 @@
+C:\Users\Evandro\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\bin\Release\SerialMES.exe
+C:\Users\Evandro\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\bin\Release\SerialMES.pdb
+C:\Users\Evandro\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\obj\x86\Release\TerminalSerialDemo.TerminalSerial.resources
+C:\Users\Evandro\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\obj\x86\Release\SerialMES.Properties.Resources.resources
+C:\Users\Evandro\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\obj\x86\Release\SerialMES.csproj.GenerateResource.Cache
+C:\Users\Evandro\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\obj\x86\Release\SerialMES.exe
+C:\Users\Evandro\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\obj\x86\Release\SerialMES.pdb
+C:\Users\Evandro\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\obj\x86\Release\SerialMES.csprojResolveAssemblyReference.cache
