@@ -1,26 +1,63 @@
-00:56:07 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
+12:19:16 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
 make all 
-'Building file: ../Sources/main.c'
+'Building file: ../Sources/serial.c'
 'Invoking: Cross ARM C Compiler'
-arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"../Sources" -I"../Includes" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"../Sources" -I"../Includes" -std=c99 -MMD -MP -MF"Sources/serial.d" -MT"Sources/serial.o" -c -o "Sources/serial.o" "../Sources/serial.c"
 In file included from ../Sources/extern.h:14:0,
-                 from ../Sources/main.c:31:
+                 from ../Sources/serial.h:12,
+                 from ../Sources/serial.c:7:
 ../Sources/gpio.h:15:20: warning: extra tokens at end of #ifndef directive [enabled by default]
  #ifndef PORT_PCR_PE(x)
                     ^
-'Finished building: ../Sources/main.c'
+../Sources/serial.c: In function 'InicializaSerial':
+../Sources/serial.c:17:2: warning: implicit declaration of function 'uart_init' [-Wimplicit-function-declaration]
+  uart_init(UART0_BASE_PTR,(iClock/2),baud_rate);
+  ^
+../Sources/serial.c: In function 'EnviaCh':
+../Sources/serial.c:39:2: warning: implicit declaration of function 'uart_putchar' [-Wimplicit-function-declaration]
+  uart_putchar(UART0_BASE_PTR,ch) ;
+  ^
+../Sources/serial.c: In function 'RecebeCh':
+../Sources/serial.c:48:2: warning: implicit declaration of function 'uart_getchar' [-Wimplicit-function-declaration]
+  return uart_getchar(UART0_BASE_PTR);
+  ^
+'Finished building: ../Sources/serial.c'
 ' '
 'Building target: Motec_Kl25Z.elf'
 'Invoking: Cross ARM C++ Linker'
 arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "MKL25Z128xxx4_flash.ld" -Xlinker --gc-sections -L"C:/Users/Evandro/Documents/GitHub/mostec/Firmware/Motec_Kl25Z/Project_Settings/Linker_Files" -Wl,-Map,"Motec_Kl25Z.map" -specs=nano.specs -specs=nosys.specs -o "Motec_Kl25Z.elf"  ./Sources/adc.o ./Sources/cpu.o ./Sources/gpio.o ./Sources/main.o ./Sources/serial.o ./Sources/uart.o  ./Project_Settings/Startup_Code/startup_MKL25Z4.o ./Project_Settings/Startup_Code/system_MKL25Z4.o   
 'Finished building target: Motec_Kl25Z.elf'
 ' '
-00:56:23 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
+12:25:43 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
 make all 
 make: Nothing to be done for `all'.
-00:58:12 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
+12:27:20 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
 make all 
-make: Nothing to be done for `all'.
-00:58:25 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
-make all 
-make: Nothing to be done for `all'.
+'Building file: ../Sources/serial.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"../Sources" -I"../Includes" -std=c99 -MMD -MP -MF"Sources/serial.d" -MT"Sources/serial.o" -c -o "Sources/serial.o" "../Sources/serial.c"
+In file included from ../Sources/extern.h:14:0,
+                 from ../Sources/serial.h:12,
+                 from ../Sources/serial.c:7:
+../Sources/gpio.h:15:20: warning: extra tokens at end of #ifndef directive [enabled by default]
+ #ifndef PORT_PCR_PE(x)
+                    ^
+../Sources/serial.c: In function 'InicializaSerial':
+../Sources/serial.c:17:2: warning: implicit declaration of function 'uart_init' [-Wimplicit-function-declaration]
+  uart_init(UART0_BASE_PTR,(iClock/2),baud_rate);
+  ^
+../Sources/serial.c: In function 'EnviaCh':
+../Sources/serial.c:39:2: warning: implicit declaration of function 'uart_putchar' [-Wimplicit-function-declaration]
+  uart_putchar(UART0_BASE_PTR,ch) ;
+  ^
+../Sources/serial.c: In function 'RecebeCh':
+../Sources/serial.c:48:2: warning: implicit declaration of function 'uart_getchar' [-Wimplicit-function-declaration]
+  return uart_getchar(UART0_BASE_PTR);
+  ^
+'Finished building: ../Sources/serial.c'
+' '
+'Building target: Motec_Kl25Z.elf'
+'Invoking: Cross ARM C++ Linker'
+arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "MKL25Z128xxx4_flash.ld" -Xlinker --gc-sections -L"C:/Users/Evandro/Documents/GitHub/mostec/Firmware/Motec_Kl25Z/Project_Settings/Linker_Files" -Wl,-Map,"Motec_Kl25Z.map" -specs=nano.specs -specs=nosys.specs -o "Motec_Kl25Z.elf"  ./Sources/adc.o ./Sources/cpu.o ./Sources/gpio.o ./Sources/main.o ./Sources/serial.o ./Sources/uart.o  ./Project_Settings/Startup_Code/startup_MKL25Z4.o ./Project_Settings/Startup_Code/system_MKL25Z4.o   
+'Finished building target: Motec_Kl25Z.elf'
+' '

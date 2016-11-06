@@ -140,3 +140,43 @@
 (00:58:23.468) INFO: [TadModel] DSF session ID 9 has ended
 (00:58:25.481) INFO: [TadModel] DSF session ID 10 has started
 (00:58:28.760) INFO: [TadState] TAD state changed from DEBUG_STARTED to DEBUG_INIT_0 (Suspended, USER_REQUEST)
+(01:00:52.311) INFO: [TadModel] DSF session ID 10 has ended
+(01:04:38.044) INFO: [TadModel] DSF session ID 11 has started
+(01:04:44.686) INFO: [TadState] TAD state changed from DEBUG_STARTED to DEBUG_INIT_0 (Suspended, USER_REQUEST)
+(01:04:57.777) INFO: [TadModel] DSF session ID 11 has ended
+(01:05:17.541) INFO: [TadModel] DSF session ID 12 has started
+(01:05:21.246) INFO: [TadState] TAD state changed from DEBUG_STARTED to DEBUG_INIT_0 (Suspended, USER_REQUEST)
+(01:05:23.902) INFO: [TadState] TAD state changed from DEBUG_INIT_0 to DEBUG_INIT_1 (Resumed, USER_REQUEST)
+(01:05:23.997) INFO: [TadState] TAD state changed from DEBUG_INIT_1 to DEBUG_SUSPENDED (Suspended, BREAKPOINT)
+(01:05:27.741) INFO: [TadState] TAD state changed from DEBUG_SUSPENDED to DEBUG_RESUMED (Resumed, USER_REQUEST)
+(01:05:34.278) INFO: [TadState] TAD state changed from DEBUG_RESUMED to READY (Suspended, SIGNAL)
+(01:05:34.411) INFO: [TadModel] DSF session ID 12 has ended
+(01:05:34.783) ReadingException: com.freescale.mqx.gdb.tad.model.globalstatus.TadGlobalStatusFactory.isMqxDataValid() at 60.line "readLongVariableSafely(_mqx_kernel_data)"
+(01:05:34.783) ERROR: [TadGlobalStatusFactory] Kernel Data NOT valid (pointer: 0x0000)
+(01:05:34.783) ERROR: [TadGlobalStatusFactory] MQX data not valid!
+(01:05:34.783) INFO: [TadModel$3] Loading of TAD Global Status took 501 ms
+(01:06:31.468) INFO: [TadModel] DSF session ID 13 has started
+(01:06:34.654) INFO: [TadState] TAD state changed from DEBUG_STARTED to DEBUG_INIT_0 (Suspended, USER_REQUEST)
+(01:06:37.294) INFO: [TadState] TAD state changed from DEBUG_INIT_0 to DEBUG_INIT_1 (Resumed, USER_REQUEST)
+(01:06:37.385) INFO: [TadState] TAD state changed from DEBUG_INIT_1 to DEBUG_SUSPENDED (Suspended, BREAKPOINT)
+(01:06:41.168) INFO: [TadState] TAD state changed from DEBUG_SUSPENDED to DEBUG_RESUMED (Resumed, USER_REQUEST)
+(01:07:00.932) INFO: [TadState] TAD state changed from DEBUG_RESUMED to READY (Suspended, SIGNAL)
+(01:07:01.437) ReadingException: com.freescale.mqx.gdb.tad.model.globalstatus.TadGlobalStatusFactory.isMqxDataValid() at 60.line "readLongVariableSafely(_mqx_kernel_data)"
+(01:07:01.437) ERROR: [TadGlobalStatusFactory] Kernel Data NOT valid (pointer: 0x0000)
+(01:07:01.437) ERROR: [TadGlobalStatusFactory] MQX data not valid!
+(01:07:01.438) INFO: [TadModel$3] Loading of TAD Global Status took 501 ms
+(01:07:01.438) INFO: [TadGlobalStatusController] TAD global status data is ready!
+(01:07:06.852) INFO: [TadState] TAD state changed from READY to DEBUG_RESUMED (Resumed, USER_REQUEST)
+(01:07:06.944) INFO: [TadState] TAD state changed from DEBUG_RESUMED to READY (Suspended, BREAKPOINT)
+(01:07:07.451) ReadingException: com.freescale.mqx.gdb.tad.model.globalstatus.TadGlobalStatusFactory.isMqxDataValid() at 60.line "readLongVariableSafely(_mqx_kernel_data)"
+(01:07:07.451) ERROR: [TadGlobalStatusFactory] Kernel Data NOT valid (pointer: 0x0000)
+(01:07:07.452) ERROR: [TadGlobalStatusFactory] MQX data not valid!
+(01:07:07.452) INFO: [TadModel$3] Loading of TAD Global Status took 502 ms
+(01:07:07.452) INFO: [TadGlobalStatusController] TAD global status data is ready!
+(01:07:08.857) INFO: [TadState] TAD state changed from READY to DEBUG_RESUMED (Resumed, USER_REQUEST)
+(01:07:45.801) INFO: [TadState] TAD state changed from DEBUG_RESUMED to READY (Suspended, SIGNAL)
+(01:07:46.307) ReadingException: com.freescale.mqx.gdb.tad.model.globalstatus.TadGlobalStatusFactory.isMqxDataValid() at 60.line "readLongVariableSafely(_mqx_kernel_data)"
+(01:07:46.307) ERROR: [TadGlobalStatusFactory] Kernel Data NOT valid (pointer: 0x0000)
+(01:07:46.307) ERROR: [TadGlobalStatusFactory] MQX data not valid!
+(01:07:46.307) INFO: [TadModel$3] Loading of TAD Global Status took 501 ms
+(01:07:46.307) INFO: [TadGlobalStatusController] TAD global status data is ready!

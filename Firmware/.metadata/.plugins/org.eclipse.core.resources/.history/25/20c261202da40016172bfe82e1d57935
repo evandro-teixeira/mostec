@@ -68,7 +68,7 @@ void EnviaString(char* msg)
 void IRQ_Serial(void)
 {
 	char c = 0;
-	if (UART0_S1&UART_S1_RDRF_MASK)
+	/*if (UART0_S1&UART_S1_RDRF_MASK)
 	{
 		c = UART0_D;
 
@@ -76,7 +76,7 @@ void IRQ_Serial(void)
 		{
 			UART0_D  = c;
 		}
-	}
+	}*/
 	gpio_toggle(PORT_B,19);
 }
 #endif

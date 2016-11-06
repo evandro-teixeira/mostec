@@ -21,8 +21,8 @@ void InicializaSerial(uint32_t baud_rate)
 	//EnableInterrupts;
 	//enable_irq(INT_UART0 -16);
 	//set_irq_priority((INT_UART0 -16), 2);
-	NVIC_EnableIRQ(UART0_IRQn-16);
-	NVIC_SetPriority(UART0_IRQn-16,2);
+	NVIC_EnableIRQ(UART0_IRQn);
+	NVIC_SetPriority(UART0_IRQn,2);
 
 	//NVIC_ICPR |= 1 << ((INT_PIT - 16) % 32);
 	//NVIC_ISER |= 1 << ((INT_PIT - 16) % 32);
@@ -77,7 +77,6 @@ void IRQ_Serial(void)
 			UART0_D  = c;
 		}
 	}
-	gpio_toggle(PORT_B,19);
 }
 #endif
 //=========================================================
