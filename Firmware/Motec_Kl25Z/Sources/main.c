@@ -28,20 +28,36 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "MKL25Z4.h"
-#include "gpio.h"
-#include "adc.h"
+#include "extern.h"
 
-static int i = 0;
+long int i = 0;
 
 int main(void)
 {
-
     /* Write your code here */
-
     /* This for loop should be replaced. By default this loop allows a single stepping. */
-    for (;;) {
-        i++;
+
+	InicializaCPU();			// Inicializa CPU
+	InicializaSerial(115200);   // Inicializa Serial com Baud Rate 115200
+
+	gpio_direction(PORT_B,18,OUTPUT,NO_PULL_RESISTOR); // LED RED
+	gpio_direction(PORT_B,19,OUTPUT,NO_PULL_RESISTOR); // LED GREEN
+	gpio_direction(PORT_D,1,OUTPUT,NO_PULL_RESISTOR);  // LED BLUE
+
+	gpio_set(PORT_B,18,ON);	// Desliga LED RED
+	gpio_set(PORT_B,19,ON);	// Desliga LED GREEN
+	gpio_set(PORT_D,1,ON);	// Desliga LED BLUE
+
+	//NVIC_EnableIRQ(PORTC_IRQn);
+
+
+	EnviaString("\n\rMOSTEC 2016");
+
+    for (;;)
+    {
+       // i++;
+    	gpio_toggle(PORT_B,18);  // Toggle LED Red
+    	for(i=0;i<10000;i++);
     }
     /* Never leave main */
     return 0;

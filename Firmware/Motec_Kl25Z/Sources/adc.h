@@ -8,7 +8,7 @@
 #ifndef SOURCES_ADC_H_
 #define SOURCES_ADC_H_
 
-#include "MKL25Z4.h"
+#include "extern.h"
 
 #define ADC_0	0	//	PTE20
 #define ADC_1	4	//  PTE21

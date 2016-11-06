@@ -9,8 +9,9 @@
 #define SOURCES_GPIO_H_
 
 
-#include "MKL25Z4.h"
+#include "extern.h"
 
+// utilizar com o CodeWarrior
 #ifndef PORT_PCR_PE(x)
 #define PORT_PCR_PE(x) (((uint32_t)(((uint32_t)(x))<<PORT_PCR_PE_SHIFT))&PORT_PCR_PE_MASK)
 #endif
@@ -28,6 +29,8 @@ typedef unsigned char bool;
 #define INPUT 	0
 #define HIGH 	1
 #define LOW 	0
+#define ON		1
+#define OFF     0
 
 #define PULL_RESISTOR 1		// habilita pull resistor
 #define NO_PULL_RESISTOR 0

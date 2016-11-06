@@ -4,9 +4,10 @@
  *  Created on: 05/11/2016
  *      Author: Evandro
  */
-
 #include "adc.h"
-
+/********************************************************************/
+//
+/********************************************************************/
 void adc_init(uint8_t res)
 {
 	// Enable clocks
@@ -23,8 +24,9 @@ void adc_init(uint8_t res)
 
 	ADC0_SC1A |= ADC_SC1_ADCH(31); // Disable module
 }
-
-
+/********************************************************************/
+//
+/********************************************************************/
 uint16_t adc_read(uint16_t ch)
 {
 	//ADC0_SC1A = (ch & ADC_SC1_ADCH_MASK) | (ADC0_SC1A & (ADC_SC1_AIEN_MASK | ADC_SC1_DIFF_MASK));     // Write to SC1A to start conversion
@@ -33,5 +35,5 @@ uint16_t adc_read(uint16_t ch)
 	while(!(ADC0_SC1A & ADC_SC1_COCO_MASK)); // Run until the conversion is complete
 	return ADC0_RA;
 }
-
+/********************************************************************/
 

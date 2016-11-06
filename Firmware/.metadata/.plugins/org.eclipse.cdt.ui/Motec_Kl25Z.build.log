@@ -1,6 +1,6 @@
-19:20:05 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
+00:58:25 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
 make all 
 make: Nothing to be done for `all'.
 
-19:20:06 Build Finished (took 217ms)
+00:58:26 Build Finished (took 350ms)
 

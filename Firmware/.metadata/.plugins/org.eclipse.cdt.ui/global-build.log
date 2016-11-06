@@ -1,3 +1,26 @@
-19:20:05 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
+00:56:07 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
+make all 
+'Building file: ../Sources/main.c'
+'Invoking: Cross ARM C Compiler'
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"../Sources" -I"../Includes" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/extern.h:14:0,
+                 from ../Sources/main.c:31:
+../Sources/gpio.h:15:20: warning: extra tokens at end of #ifndef directive [enabled by default]
+ #ifndef PORT_PCR_PE(x)
+                    ^
+'Finished building: ../Sources/main.c'
+' '
+'Building target: Motec_Kl25Z.elf'
+'Invoking: Cross ARM C++ Linker'
+arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "MKL25Z128xxx4_flash.ld" -Xlinker --gc-sections -L"C:/Users/Evandro/Documents/GitHub/mostec/Firmware/Motec_Kl25Z/Project_Settings/Linker_Files" -Wl,-Map,"Motec_Kl25Z.map" -specs=nano.specs -specs=nosys.specs -o "Motec_Kl25Z.elf"  ./Sources/adc.o ./Sources/cpu.o ./Sources/gpio.o ./Sources/main.o ./Sources/serial.o ./Sources/uart.o  ./Project_Settings/Startup_Code/startup_MKL25Z4.o ./Project_Settings/Startup_Code/system_MKL25Z4.o   
+'Finished building target: Motec_Kl25Z.elf'
+' '
+00:56:23 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
+make all 
+make: Nothing to be done for `all'.
+00:58:12 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
+make all 
+make: Nothing to be done for `all'.
+00:58:25 **** Incremental Build of configuration Debug for project Motec_Kl25Z ****
 make all 
 make: Nothing to be done for `all'.
