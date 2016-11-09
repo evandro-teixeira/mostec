@@ -32,9 +32,10 @@ int main(void)
 	put("\r\nMaquina de Tchay");
 	put("\r\n");
 	
-	
 	while(TRUE)
 	{
+		Interpreter();
+		
 		counter++;
 		if(counter >= DLY)
 		{

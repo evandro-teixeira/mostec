@@ -21,7 +21,6 @@
 #define SET          1
 #define RESET        0
 
-#define NEW_DATA     FLAG_0
 
 void Flags_Action(uint8_t flag, uint8_t action);
 bool Flag_Check(uint8_t flag);
