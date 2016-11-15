@@ -40,6 +40,14 @@
 #define FIM_CURSO_1    		6
 #define FIM_CURSO_2			7
 
+#define TEMPO_BOMBA_MEL			1000
+#define TEMPO_BOMBA_VODKA		1000
+#define TEMPO_BOMBA_ENERGETICO 	1000
+#define TEMPO_BOMBA_CORANTE		1000
+#define TEMPO_ESTEIRA_STEP		1000
+#define TEMPO_ESTEIRA_TOTAL		1000
+
+
 uint8_t data_tx[8]; 
 uint8_t data_rx[8];
 uint8_t entrada[8];

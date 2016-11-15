@@ -22,3 +22,11 @@ C:\Users\Silvio\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\o
 C:\Users\Silvio\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\obj\x86\Debug\SerialMES.csproj.GenerateResource.Cache
 C:\Users\Silvio\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\bin\Debug\SerialMES.exe
 C:\Users\Silvio\Google Drive\Projeto MES\Software\SerialMES\TerminalSerialDemo\bin\Debug\SerialMES.pdb
+C:\Users\Evandro\Documents\GitHub\mostec\Software\TerminalSerialDemo\obj\x86\Debug\SerialMES.exe
+C:\Users\Evandro\Documents\GitHub\mostec\Software\TerminalSerialDemo\obj\x86\Debug\SerialMES.pdb
+C:\Users\Evandro\Documents\GitHub\mostec\Software\TerminalSerialDemo\obj\x86\Debug\SerialMES.csprojResolveAssemblyReference.cache
+C:\Users\Evandro\Documents\GitHub\mostec\Software\TerminalSerialDemo\obj\x86\Debug\TerminalSerialDemo.TerminalSerial.resources
+C:\Users\Evandro\Documents\GitHub\mostec\Software\TerminalSerialDemo\obj\x86\Debug\SerialMES.Properties.Resources.resources
+C:\Users\Evandro\Documents\GitHub\mostec\Software\TerminalSerialDemo\obj\x86\Debug\SerialMES.csproj.GenerateResource.Cache
+C:\Users\Evandro\Documents\GitHub\mostec\Software\TerminalSerialDemo\bin\Debug\SerialMES.exe
+C:\Users\Evandro\Documents\GitHub\mostec\Software\TerminalSerialDemo\bin\Debug\SerialMES.pdb

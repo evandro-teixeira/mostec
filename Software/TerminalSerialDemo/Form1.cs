@@ -509,7 +509,7 @@ namespace TerminalSerialDemo
 
         private void button13_Click(object sender, EventArgs e)
         {
-
+            /*
             if (button13.Text == "OFF")
             {
                 if (isOpen)
@@ -557,12 +557,12 @@ namespace TerminalSerialDemo
                     }
                 }
             }
-
+            */
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            if (button14.Text == "OFF")
+            /*if (button14.Text == "OFF")
             {
                 if (isOpen)
                 {
@@ -609,15 +609,13 @@ namespace TerminalSerialDemo
                     }
                 }
 
-            }
-
-
+            }*/
 
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            if (button15.Text == "OFF")
+            /*if (button15.Text == "OFF")
             {
                 if (isOpen)
                 {
@@ -664,13 +662,13 @@ namespace TerminalSerialDemo
                     }
                 }
             }
-
+            */
         }
 
 
         private void button16_Click(object sender, EventArgs e)
         {
-            if (button16.Text == "OFF")
+            /*if (button16.Text == "OFF")
             {
                 if (isOpen)
                 {
@@ -717,13 +715,13 @@ namespace TerminalSerialDemo
                     }
                 }
             }
-
+            */
         }
 
 
         private void button17_Click(object sender, EventArgs e)
         {
-            if (button17.Text == "OFF")
+            /*if (button17.Text == "OFF")
             {
                 if (isOpen)
                 {
@@ -770,12 +768,12 @@ namespace TerminalSerialDemo
                     }
                 }
             }
-
+            */
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
-            if (button18.Text == "OFF")
+            /*if (button18.Text == "OFF")
             {
                 if (isOpen)
                 {
@@ -822,7 +820,7 @@ namespace TerminalSerialDemo
                     }
                 }
             }
-
+            */
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -894,6 +892,16 @@ namespace TerminalSerialDemo
 
                 }
             }
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
 
         private void button22_Click(object sender, EventArgs e)

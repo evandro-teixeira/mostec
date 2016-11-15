@@ -35,6 +35,7 @@ int main(void)
 	while(TRUE)
 	{
 		Interpreter();
+		Controle_Aplicacao();
 		
 		counter++;
 		if(counter >= DLY)

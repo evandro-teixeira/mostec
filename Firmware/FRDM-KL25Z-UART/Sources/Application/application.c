@@ -340,6 +340,8 @@ void Change_Machine_Status(uint8_t st)
 void Controle_Aplicacao(void)
 {
 	static uint8_t estado_aplicacao = 0;
+	static uint8_t maq_estado = 0;
+	static uint64_t tempo = 0;
 	
 	switch(estado_aplicacao)
 	{
@@ -352,7 +354,7 @@ void Controle_Aplicacao(void)
 					// Reset flag
 					Flags_Action( INICIA_PROCESSO,RESET );
 					Change_Machine_Status( EXECUTANDO );
-					estado_maquina = EXECUTANDO;
+					estado_maquina = RUNNING;
 				}
 			}
 			else // se o copo não estiver na posição inicial, deve posicionar o mesmo
@@ -367,9 +369,123 @@ void Controle_Aplicacao(void)
 			if((entrada[FIM_CURSO_1] == 1) &&
 			   (entrada[FIM_CURSO_2] == 1) )
 			{
-				
+				switch(maq_estado)
+				{
+					case 0:
+						Bomba_Mel(ON);// Liga Bomba de MEL
+						tempo = Calcula_Tick(TEMPO_BOMBA_MEL); // inicia contagem de tempo
+						maq_estado = 1;
+					break;
+					
+					case 1:
+						if(Check_Tick(tempo) == TRUE)
+						{
+							Bomba_Mel(OFF);// Liga Bomba de MEL
+							maq_estado = 2;
+						}
+					break;
+					
+					case 2: // liga esteira
+						Controle_Esteira( ON , RIGHT);
+						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo
+						maq_estado = 3;
+					break;	
+					
+					case 3:
+						if(Check_Tick(tempo) == TRUE)
+						{
+							Controle_Esteira( OFF , OFF); // desliga esteira
+							maq_estado = 4;
+						}
+					break;
+					
+					case 4:
+						Bomba_Vodka(ON);// Liga Bomba de Vodka
+						tempo = Calcula_Tick(TEMPO_BOMBA_VODKA); // inicia contagem de tempo
+						maq_estado = 5;
+					break;
+					
+					case 5:
+						if(Check_Tick(tempo) == TRUE)
+						{
+							Bomba_Vodka(OFF);// Liga Bomba de Vodka
+							maq_estado = 6;
+						}
+					break;
+					
+					case 6:
+						Controle_Esteira( ON , RIGHT);
+						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo
+						maq_estado = 7;
+					break;	
+					
+					case 7:
+						if(Check_Tick(tempo) == TRUE)
+						{
+							Controle_Esteira( OFF , OFF);
+							maq_estado = 8;
+						}
+					break;	
+					
+					case 8:
+						Bomba_Energetico( ON );
+						tempo = Calcula_Tick(TEMPO_BOMBA_ENERGETICO); // inicia contagem de tempo
+						maq_estado = 9;
+					break;	
+					
+					case 9:
+						if(Check_Tick(tempo) == TRUE)
+						{
+							Bomba_Energetico( OFF );
+							maq_estado = 10;
+						}
+					break;	
+					
+					case 10:
+						Controle_Esteira( ON , RIGHT);
+						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo
+						maq_estado = 11;
+					break;	
+					
+					case 11:
+						if(Check_Tick(tempo) == TRUE)
+						{
+							Controle_Esteira( OFF, OFF );
+							maq_estado = 12;
+						}
+					break;	
+					
+					case 12:
+						Bomba_Corante(ON);
+						tempo = Calcula_Tick(TEMPO_BOMBA_CORANTE); // inicia contagem de tempo
+						maq_estado = 13;
+					break;	
+					
+					case 13:
+						if(Check_Tick(tempo) == TRUE)
+						{
+							Bomba_Corante(OFF);
+							maq_estado = 14;
+						}
+					break;	
+					
+					case 14:
+						Controle_Esteira( ON , LEFT);
+						tempo = Calcula_Tick(TEMPO_ESTEIRA_TOTAL); // inicia contagem de tempo
+						maq_estado = 15;
+					break;
+					
+					case 15:
+						if(Check_Tick(tempo) == TRUE)
+						{
+							Controle_Esteira( OFF , OFF);
+							maq_estado = 0;
+							estado_aplicacao = STOP;
+						}
+					break;	
+				}
 			}
-			else
+			else // caso algumas da chaves seja acionadas deve desligar a esteira e set a flag de erro
 			{
 				// desliga Esteira
 				Controle_Esteira(OFF,OFF);
