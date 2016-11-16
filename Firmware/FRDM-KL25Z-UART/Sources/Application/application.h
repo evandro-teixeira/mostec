@@ -29,6 +29,7 @@
 #define INICIA_PROCESSO FLAG_1
 #define POSITION		FLAG_2 //position
 #define ERRO_INT		FLAG_3
+#define FIM_PROCESSO    FLAG_4
 
 // ENTRADAS
 #define BOTAO_EMERGENCIA 	0
@@ -40,13 +41,14 @@
 #define FIM_CURSO_1    		6
 #define FIM_CURSO_2			7
 
-#define TEMPO_BOMBA_MEL			1000
-#define TEMPO_BOMBA_VODKA		1000
-#define TEMPO_BOMBA_ENERGETICO 	1000
-#define TEMPO_BOMBA_CORANTE		1000
-#define TEMPO_ESTEIRA_STEP		1000
-#define TEMPO_ESTEIRA_TOTAL		1000
+#define TEMPO_BOMBA_MEL			5//30 // segundos
+#define TEMPO_BOMBA_VODKA		5//30 // segundos
+#define TEMPO_BOMBA_ENERGETICO 	5//30 // segundos
+#define TEMPO_BOMBA_CORANTE		5//30 // segundos
+#define TEMPO_ESTEIRA_STEP		10//120 // segundos
+#define TEMPO_ESTEIRA_TOTAL		20//240 // segundos
 
+#define TEMPO_MUX   1000
 
 uint8_t data_tx[8]; 
 uint8_t data_rx[8];

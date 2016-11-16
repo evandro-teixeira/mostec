@@ -1,4 +1,4 @@
 activeuserprofiles=EvandroTeixeira;Team
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=Evandro
-useridperkey=EvandroTeixeira.Local\=Evandro;
+useridperkey=EvandroTeixeira.Local\=Evandro;EvandroTeixeira.FRDM-KL25Z-UART_FLASH_OpenSDA\=B34443;EvandroTeixeira.FRDM-KL25Z-UART_FLASH_OpenSDA Target\=B34443;

@@ -28,7 +28,7 @@ void Inicializa_Entrada(void)
 	gpio_direction(PORT_A,12,OUTPUT,NO_PULL_RESISTOR); // C
 	gpio_direction(PORT_D,4, OUTPUT,NO_PULL_RESISTOR); // EN
 	// entrada
-	gpio_direction(PORT_D,5,INPUT,PULL_RESISTOR);      // X
+	gpio_direction(PORT_D,5,INPUT,NO_PULL_RESISTOR);      // X
 }
 /********************************************************************/
 //
@@ -41,96 +41,160 @@ bool Le_Entradas(uint8_t ch)
 	{
 		case 0:
 			gpio_set(PORT_A,5,OFF);	// A
-			gpio_set(PORT_A,5,OFF); // B
-			gpio_set(PORT_A,5,OFF); // C
+			gpio_set(PORT_A,4,OFF); // B
+			gpio_set(PORT_A,12,OFF); // C
 			gpio_set(PORT_D,4,OFF); // EN
 			
-			for(i=0;i<100;i++);
+			for(i=0;i<TEMPO_MUX;i++);
 			
-			return (bool)(gpio_read(PORT_D,5));
+			//return (bool)(gpio_read(PORT_D,5));
+			if(gpio_read(PORT_D,5))
+			{
+				return TRUE;
+			}
+			else
+			{
+				return FALSE;
+			}			
 		break;
 		
 		case 1:
 			gpio_set(PORT_A,5,ON);	// A
-			gpio_set(PORT_A,5,OFF); // B
-			gpio_set(PORT_A,5,OFF); // C
+			gpio_set(PORT_A,4,OFF); // B
+			gpio_set(PORT_A,12,OFF); // C
 			gpio_set(PORT_D,4,OFF); // EN
 			
-			for(i=0;i<100;i++);
+			for(i=0;i<TEMPO_MUX;i++);
 			
-			return (bool)(gpio_read(PORT_D,5));
+			//return (bool)(gpio_read(PORT_D,5));
+			if(gpio_read(PORT_D,5))
+			{
+				return TRUE;
+			}
+			else
+			{
+				return FALSE;
+			}
 		break;
 		
 		case 2:
 			gpio_set(PORT_A,5,OFF);	// A
-			gpio_set(PORT_A,5,ON);  // B
-			gpio_set(PORT_A,5,OFF); // C
+			gpio_set(PORT_A,4,ON);  // B
+			gpio_set(PORT_A,12,OFF); // C
 			gpio_set(PORT_D,4,OFF); // EN
 			
-			for(i=0;i<100;i++);
+			for(i=0;i<TEMPO_MUX;i++);
 			
-			return (bool)(gpio_read(PORT_D,5));
+			//return (bool)(gpio_read(PORT_D,5));
+			if(gpio_read(PORT_D,5))
+			{
+				return TRUE;
+			}
+			else
+			{
+				return FALSE;
+			}
 		break;		
 		
 		case 3:
 			gpio_set(PORT_A,5,ON);	// A
-			gpio_set(PORT_A,5,ON);  // B
-			gpio_set(PORT_A,5,OFF); // C
+			gpio_set(PORT_A,4,ON);  // B
+			gpio_set(PORT_A,12,OFF); // C
 			gpio_set(PORT_D,4,OFF); // EN
 			
-			for(i=0;i<100;i++);
+			for(i=0;i<TEMPO_MUX;i++);
 			
-			return (bool)(gpio_read(PORT_D,5));
+			//return (bool)(gpio_read(PORT_D,5));
+			if(gpio_read(PORT_D,5))
+			{
+				return TRUE;
+			}
+			else
+			{
+				return FALSE;
+			}
 		break;
 		
 		case 4:
 			gpio_set(PORT_A,5,OFF);	// A
-			gpio_set(PORT_A,5,OFF); // B
-			gpio_set(PORT_A,5,ON);  // C
+			gpio_set(PORT_A,4,OFF); // B
+			gpio_set(PORT_A,12,ON);  // C
 			gpio_set(PORT_D,4,OFF); // EN
 			
-			for(i=0;i<100;i++);
+			for(i=0;i<TEMPO_MUX;i++);
 			
-			return (bool)(gpio_read(PORT_D,5));
+			//return (bool)(gpio_read(PORT_D,5));
+			if(gpio_read(PORT_D,5))
+			{
+				return TRUE;
+			}
+			else
+			{
+				return FALSE;
+			}
 		break;
 		
 		case 5:
 			gpio_set(PORT_A,5,ON);	// A
-			gpio_set(PORT_A,5,OFF); // B
-			gpio_set(PORT_A,5,ON);  // C
+			gpio_set(PORT_A,4,OFF); // B
+			gpio_set(PORT_A,12,ON);  // C
 			gpio_set(PORT_D,4,OFF); // EN
 			
-			for(i=0;i<100;i++);
+			for(i=0;i<TEMPO_MUX;i++);
 			
-			return (bool)(gpio_read(PORT_D,5));
+			//return (bool)(gpio_read(PORT_D,5));
+			if(gpio_read(PORT_D,5))
+			{
+				return TRUE;
+			}
+			else
+			{
+				return FALSE;
+			}
 		break;
 		
 		case 6:
 			gpio_set(PORT_A,5,OFF);	// A
-			gpio_set(PORT_A,5,ON);  // B
-			gpio_set(PORT_A,5,ON);  // C
+			gpio_set(PORT_A,4,ON);  // B
+			gpio_set(PORT_A,12,ON);  // C
 			gpio_set(PORT_D,4,OFF); // EN
 			
-			for(i=0;i<100;i++);
+			for(i=0;i<TEMPO_MUX;i++);
 			
-			return (bool)(gpio_read(PORT_D,5));
+			//return (bool)(gpio_read(PORT_D,5));
+			if(gpio_read(PORT_D,5))
+			{
+				return TRUE;
+			}
+			else
+			{
+				return FALSE;
+			}
 		break;
 		
 		case 7:
 			gpio_set(PORT_A,5,ON);	// A
-			gpio_set(PORT_A,5,ON);  // B
-			gpio_set(PORT_A,5,ON);  // C
+			gpio_set(PORT_A,4,ON);  // B
+			gpio_set(PORT_A,12,ON);  // C
 			gpio_set(PORT_D,4,OFF); // EN
 			
-			for(i=0;i<100;i++);
+			for(i=0;i<TEMPO_MUX;i++);
 			
-			return (bool)(gpio_read(PORT_D,5));
+			//return (bool)(gpio_read(PORT_D,5));
+			if(gpio_read(PORT_D,5))
+			{
+				return TRUE;
+			}
+			else
+			{
+				return FALSE;
+			}
 		break;
 		
 		default:
 			gpio_set(PORT_A,5,OFF);	// A
-			gpio_set(PORT_A,5,OFF); // B
-			gpio_set(PORT_A,5,OFF); // C
+			gpio_set(PORT_A,4,OFF); // B
+			gpio_set(PORT_A,12,OFF); // C
 			gpio_set(PORT_D,4,ON);  // EN
 		break;	
 	}
@@ -235,9 +299,11 @@ void Interpreter(void)
 {
 	uint8_t i = 0;
 	
-	if( Flag_Check(NEW_DATA) == TRUE )
+	if(( Flag_Check(NEW_DATA) == TRUE ) ||
+	  ( Flag_Check(FIM_PROCESSO) == TRUE ))		
 	{
 		Flags_Action(NEW_DATA,RESET);
+		Flags_Action(FIM_PROCESSO,RESET);
 		
 		switch( Machine_Status() )
 		{
@@ -257,6 +323,9 @@ void Interpreter(void)
 				//Change_Machine_Status( EXECUTANDO );
 				// SET flag para iniciar 
 				Flags_Action(INICIA_PROCESSO,SET);
+				
+				put("\r\nRecebeu dados");
+				put("\r\nSet Flag para iniciar o processo");
 			break;
 			
 			case EXECUTANDO:
@@ -271,6 +340,8 @@ void Interpreter(void)
 				{
 					out_char( data_tx[i] );
 				}
+				
+				put("\r\nMaquina Oucupada");
 			break;
 			
 			case OK:
@@ -285,6 +356,10 @@ void Interpreter(void)
 				{
 					out_char( data_tx[i] );
 				}
+				
+				put("\r\nProcesso Finalizado");
+				
+				Change_Machine_Status( PARADO );
 			break;
 			
 			default:
@@ -346,60 +421,69 @@ void Controle_Aplicacao(void)
 	switch(estado_aplicacao)
 	{
 		case STOP:
-			if((Flag_Check(POSITION) == TRUE) && // Checa se o copo esta posição inicial
-			   (Flag_Check(ERRO_INT) == FALSE))  // e checa se não ha erro
-			{
+			//put("\r\n Estado parado ");
+			//if((Flag_Check(POSITION) == TRUE) && // Checa se o copo esta posição inicial
+			//   (Flag_Check(ERRO_INT) == FALSE))  // e checa se não ha erro
+			//{
 				if( Flag_Check( INICIA_PROCESSO ) == TRUE )
 				{
 					// Reset flag
+					put("\r\nInicia processo");
 					Flags_Action( INICIA_PROCESSO,RESET );
 					Change_Machine_Status( EXECUTANDO );
-					estado_maquina = RUNNING;
+					estado_aplicacao = RUNNING;
 				}
-			}
+			//}
+			/*
 			else // se o copo não estiver na posição inicial, deve posicionar o mesmo
 			{
 				// muda para estado 
 				estado_aplicacao = POSITIONING;
-			}
+			}*/
 		break;
 		
 		case RUNNING:
 			// Checa se as chaves fim de curso
-			if((entrada[FIM_CURSO_1] == 1) &&
-			   (entrada[FIM_CURSO_2] == 1) )
-			{
+			//if((entrada[FIM_CURSO_1] == 1) &&
+			//   (entrada[FIM_CURSO_2] == 1) )
+			//{
 				switch(maq_estado)
 				{
 					case 0:
+						put("\r\nLiga Bomba de Mel");
+						
 						Bomba_Mel(ON);// Liga Bomba de MEL
-						tempo = Calcula_Tick(TEMPO_BOMBA_MEL); // inicia contagem de tempo
+						tempo = Calcula_Tick(TEMPO_BOMBA_MEL); // inicia contagem de tempo em segundos
 						maq_estado = 1;
 					break;
 					
 					case 1:
 						if(Check_Tick(tempo) == TRUE)
 						{
+							put("\r\nDesliga Bomba de Mel");
 							Bomba_Mel(OFF);// Liga Bomba de MEL
 							maq_estado = 2;
 						}
 					break;
 					
 					case 2: // liga esteira
+						put("\r\nLiga Esteira");
 						Controle_Esteira( ON , RIGHT);
-						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo
+						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo em segundos
 						maq_estado = 3;
 					break;	
 					
 					case 3:
 						if(Check_Tick(tempo) == TRUE)
 						{
+							put("\r\nDesliga Esteira");
 							Controle_Esteira( OFF , OFF); // desliga esteira
 							maq_estado = 4;
 						}
 					break;
 					
 					case 4:
+						put("\r\nLiga Bomba de Vodka");
 						Bomba_Vodka(ON);// Liga Bomba de Vodka
 						tempo = Calcula_Tick(TEMPO_BOMBA_VODKA); // inicia contagem de tempo
 						maq_estado = 5;
@@ -408,90 +492,108 @@ void Controle_Aplicacao(void)
 					case 5:
 						if(Check_Tick(tempo) == TRUE)
 						{
+							put("\r\nDesliga Bomba de Vodka");
 							Bomba_Vodka(OFF);// Liga Bomba de Vodka
 							maq_estado = 6;
 						}
 					break;
 					
 					case 6:
+						put("\r\nLiga de Esteira");
 						Controle_Esteira( ON , RIGHT);
-						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo
+						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo em segundos
 						maq_estado = 7;
 					break;	
 					
 					case 7:
 						if(Check_Tick(tempo) == TRUE)
 						{
+							put("\r\nDesliga Esteira");
 							Controle_Esteira( OFF , OFF);
 							maq_estado = 8;
 						}
 					break;	
 					
 					case 8:
+						put("\r\nLiga Bomba de Esteira");
 						Bomba_Energetico( ON );
-						tempo = Calcula_Tick(TEMPO_BOMBA_ENERGETICO); // inicia contagem de tempo
+						tempo = Calcula_Tick(TEMPO_BOMBA_ENERGETICO); // inicia contagem de tempo em segundos 
 						maq_estado = 9;
 					break;	
 					
 					case 9:
 						if(Check_Tick(tempo) == TRUE)
 						{
+							put("\r\nDesliga Bomba de Energetico");
 							Bomba_Energetico( OFF );
 							maq_estado = 10;
 						}
 					break;	
 					
 					case 10:
+						put("\r\nLiga Esteira");
 						Controle_Esteira( ON , RIGHT);
-						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo
+						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo em segundos
 						maq_estado = 11;
 					break;	
 					
 					case 11:
 						if(Check_Tick(tempo) == TRUE)
 						{
+							put("\r\nDesliga Esteira");
 							Controle_Esteira( OFF, OFF );
 							maq_estado = 12;
 						}
 					break;	
 					
 					case 12:
+						put("\r\nLiga Bomba de Corante");
 						Bomba_Corante(ON);
-						tempo = Calcula_Tick(TEMPO_BOMBA_CORANTE); // inicia contagem de tempo
+						tempo = Calcula_Tick(TEMPO_BOMBA_CORANTE); // inicia contagem de tempo em segundos
 						maq_estado = 13;
 					break;	
 					
 					case 13:
 						if(Check_Tick(tempo) == TRUE)
 						{
+							put("\r\nDesliga Corante");
 							Bomba_Corante(OFF);
 							maq_estado = 14;
 						}
 					break;	
 					
 					case 14:
+						put("\r\nLiga Esteira ");
+						put("\r\nRetorna posição inicial");
 						Controle_Esteira( ON , LEFT);
-						tempo = Calcula_Tick(TEMPO_ESTEIRA_TOTAL); // inicia contagem de tempo
+						tempo = Calcula_Tick(TEMPO_ESTEIRA_TOTAL); // inicia contagem de tempo em segundos
 						maq_estado = 15;
 					break;
 					
 					case 15:
 						if(Check_Tick(tempo) == TRUE)
 						{
+							put("\r\nDesliga Esteira");
+							put("\r\nPosição Inicial");
 							Controle_Esteira( OFF , OFF);
 							maq_estado = 0;
 							estado_aplicacao = STOP;
+							
+							Change_Machine_Status( OK );
+							
+							Flags_Action(FIM_PROCESSO,SET);
 						}
 					break;	
 				}
-			}
+			//}
+			/*	
 			else // caso algumas da chaves seja acionadas deve desligar a esteira e set a flag de erro
 			{
 				// desliga Esteira
 				Controle_Esteira(OFF,OFF);
 				// Set flag que sinaliza erro
 				Flags_Action(ERRO_INT,SET);
-			}
+			}*/
 		break;	
 		
 		case POSITIONING:

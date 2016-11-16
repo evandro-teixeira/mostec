@@ -50,16 +50,6 @@
             this.btnDesconectar = new System.Windows.Forms.Button();
             this.btnConectar = new System.Windows.Forms.Button();
             this.TimerRecepcao = new System.Windows.Forms.Timer(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnEnviarDados = new System.Windows.Forms.Button();
-            this.txtEnviaDados = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnApagarTXTRecepcao = new System.Windows.Forms.Button();
-            this.txtRecepcao = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtTransmissao = new System.Windows.Forms.TextBox();
-            this.ApagarTxTTransmissao = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.button6 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -81,16 +71,26 @@
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton15 = new System.Windows.Forms.RadioButton();
             this.radioButton16 = new System.Windows.Forms.RadioButton();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ApagarTxTTransmissao = new System.Windows.Forms.Button();
+            this.txtTransmissao = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtRecepcao = new System.Windows.Forms.TextBox();
+            this.btnApagarTXTRecepcao = new System.Windows.Forms.Button();
+            this.txtEnviaDados = new System.Windows.Forms.TextBox();
+            this.btnEnviarDados = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.gBoxConfiguracao.SuspendLayout();
             this.gBoxConexao.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gBoxConfiguracao
@@ -111,7 +111,7 @@
             this.gBoxConfiguracao.Controls.Add(this.cbxComPort);
             this.gBoxConfiguracao.Location = new System.Drawing.Point(13, 13);
             this.gBoxConfiguracao.Name = "gBoxConfiguracao";
-            this.gBoxConfiguracao.Size = new System.Drawing.Size(227, 318);
+            this.gBoxConfiguracao.Size = new System.Drawing.Size(227, 437);
             this.gBoxConfiguracao.TabIndex = 0;
             this.gBoxConfiguracao.TabStop = false;
             this.gBoxConfiguracao.Text = "TerminalSerial Configuração";
@@ -242,7 +242,7 @@
             this.gBoxConexao.Controls.Add(this.lblStatusConexao);
             this.gBoxConexao.Controls.Add(this.btnDesconectar);
             this.gBoxConexao.Controls.Add(this.btnConectar);
-            this.gBoxConexao.Location = new System.Drawing.Point(13, 353);
+            this.gBoxConexao.Location = new System.Drawing.Point(13, 456);
             this.gBoxConexao.Name = "gBoxConexao";
             this.gBoxConexao.Size = new System.Drawing.Size(227, 155);
             this.gBoxConexao.TabIndex = 1;
@@ -285,104 +285,6 @@
             // TimerRecepcao
             // 
             this.TimerRecepcao.Tick += new System.EventHandler(this.TimerRecepcao_Tick);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.btnEnviarDados);
-            this.tabPage1.Controls.Add(this.txtEnviaDados);
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(561, 292);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "TerminalSerial";
-            // 
-            // btnEnviarDados
-            // 
-            this.btnEnviarDados.Location = new System.Drawing.Point(243, 6);
-            this.btnEnviarDados.Name = "btnEnviarDados";
-            this.btnEnviarDados.Size = new System.Drawing.Size(207, 23);
-            this.btnEnviarDados.TabIndex = 3;
-            this.btnEnviarDados.Text = "Enviar Dados";
-            this.btnEnviarDados.UseVisualStyleBackColor = true;
-            this.btnEnviarDados.Click += new System.EventHandler(this.btnEnviarDados_Click);
-            // 
-            // txtEnviaDados
-            // 
-            this.txtEnviaDados.Location = new System.Drawing.Point(19, 6);
-            this.txtEnviaDados.Name = "txtEnviaDados";
-            this.txtEnviaDados.Size = new System.Drawing.Size(218, 20);
-            this.txtEnviaDados.TabIndex = 2;
-            this.txtEnviaDados.TextChanged += new System.EventHandler(this.txtEnviaDados_TextChanged);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnApagarTXTRecepcao);
-            this.groupBox2.Controls.Add(this.txtRecepcao);
-            this.groupBox2.Location = new System.Drawing.Point(19, 157);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(532, 126);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Dados Recebidos";
-            // 
-            // btnApagarTXTRecepcao
-            // 
-            this.btnApagarTXTRecepcao.Location = new System.Drawing.Point(437, 17);
-            this.btnApagarTXTRecepcao.Name = "btnApagarTXTRecepcao";
-            this.btnApagarTXTRecepcao.Size = new System.Drawing.Size(83, 23);
-            this.btnApagarTXTRecepcao.TabIndex = 5;
-            this.btnApagarTXTRecepcao.Text = "Apagar";
-            this.btnApagarTXTRecepcao.UseVisualStyleBackColor = true;
-            this.btnApagarTXTRecepcao.Click += new System.EventHandler(this.btnApagarTXTRecepcao_Click);
-            // 
-            // txtRecepcao
-            // 
-            this.txtRecepcao.Location = new System.Drawing.Point(7, 19);
-            this.txtRecepcao.Multiline = true;
-            this.txtRecepcao.Name = "txtRecepcao";
-            this.txtRecepcao.Size = new System.Drawing.Size(424, 101);
-            this.txtRecepcao.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtTransmissao);
-            this.groupBox1.Controls.Add(this.ApagarTxTTransmissao);
-            this.groupBox1.Location = new System.Drawing.Point(19, 32);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(532, 119);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dados Transmitidos";
-            // 
-            // txtTransmissao
-            // 
-            this.txtTransmissao.Location = new System.Drawing.Point(7, 17);
-            this.txtTransmissao.Multiline = true;
-            this.txtTransmissao.Name = "txtTransmissao";
-            this.txtTransmissao.Size = new System.Drawing.Size(424, 97);
-            this.txtTransmissao.TabIndex = 0;
-            // 
-            // ApagarTxTTransmissao
-            // 
-            this.ApagarTxTTransmissao.Location = new System.Drawing.Point(437, 11);
-            this.ApagarTxTTransmissao.Name = "ApagarTxTTransmissao";
-            this.ApagarTxTTransmissao.Size = new System.Drawing.Size(83, 23);
-            this.ApagarTxTTransmissao.TabIndex = 4;
-            this.ApagarTxTTransmissao.Text = "Apagar";
-            this.ApagarTxTTransmissao.UseVisualStyleBackColor = true;
-            this.ApagarTxTTransmissao.Click += new System.EventHandler(this.ApagarTxTTransmissao_Click);
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(257, 13);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(569, 318);
-            this.tabControl1.TabIndex = 2;
             // 
             // button6
             // 
@@ -624,6 +526,104 @@
             this.radioButton16.Text = "MONSTER";
             this.radioButton16.UseVisualStyleBackColor = true;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.btnEnviarDados);
+            this.tabPage1.Controls.Add(this.txtEnviaDados);
+            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(561, 292);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "TerminalSerial";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtTransmissao);
+            this.groupBox1.Controls.Add(this.ApagarTxTTransmissao);
+            this.groupBox1.Location = new System.Drawing.Point(19, 32);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(532, 119);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dados Transmitidos";
+            // 
+            // ApagarTxTTransmissao
+            // 
+            this.ApagarTxTTransmissao.Location = new System.Drawing.Point(437, 11);
+            this.ApagarTxTTransmissao.Name = "ApagarTxTTransmissao";
+            this.ApagarTxTTransmissao.Size = new System.Drawing.Size(83, 23);
+            this.ApagarTxTTransmissao.TabIndex = 4;
+            this.ApagarTxTTransmissao.Text = "Apagar";
+            this.ApagarTxTTransmissao.UseVisualStyleBackColor = true;
+            this.ApagarTxTTransmissao.Click += new System.EventHandler(this.ApagarTxTTransmissao_Click);
+            // 
+            // txtTransmissao
+            // 
+            this.txtTransmissao.Location = new System.Drawing.Point(7, 17);
+            this.txtTransmissao.Multiline = true;
+            this.txtTransmissao.Name = "txtTransmissao";
+            this.txtTransmissao.Size = new System.Drawing.Size(424, 97);
+            this.txtTransmissao.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnApagarTXTRecepcao);
+            this.groupBox2.Controls.Add(this.txtRecepcao);
+            this.groupBox2.Location = new System.Drawing.Point(19, 157);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(532, 126);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dados Recebidos";
+            // 
+            // txtRecepcao
+            // 
+            this.txtRecepcao.Location = new System.Drawing.Point(7, 19);
+            this.txtRecepcao.Multiline = true;
+            this.txtRecepcao.Name = "txtRecepcao";
+            this.txtRecepcao.Size = new System.Drawing.Size(424, 101);
+            this.txtRecepcao.TabIndex = 1;
+            // 
+            // btnApagarTXTRecepcao
+            // 
+            this.btnApagarTXTRecepcao.Location = new System.Drawing.Point(437, 17);
+            this.btnApagarTXTRecepcao.Name = "btnApagarTXTRecepcao";
+            this.btnApagarTXTRecepcao.Size = new System.Drawing.Size(83, 23);
+            this.btnApagarTXTRecepcao.TabIndex = 5;
+            this.btnApagarTXTRecepcao.Text = "Apagar";
+            this.btnApagarTXTRecepcao.UseVisualStyleBackColor = true;
+            this.btnApagarTXTRecepcao.Click += new System.EventHandler(this.btnApagarTXTRecepcao_Click);
+            // 
+            // txtEnviaDados
+            // 
+            this.txtEnviaDados.Location = new System.Drawing.Point(19, 6);
+            this.txtEnviaDados.Name = "txtEnviaDados";
+            this.txtEnviaDados.Size = new System.Drawing.Size(218, 20);
+            this.txtEnviaDados.TabIndex = 2;
+            this.txtEnviaDados.TextChanged += new System.EventHandler(this.txtEnviaDados_TextChanged);
+            // 
+            // btnEnviarDados
+            // 
+            this.btnEnviarDados.Location = new System.Drawing.Point(243, 6);
+            this.btnEnviarDados.Name = "btnEnviarDados";
+            this.btnEnviarDados.Size = new System.Drawing.Size(207, 23);
+            this.btnEnviarDados.TabIndex = 3;
+            this.btnEnviarDados.Text = "Enviar Dados";
+            this.btnEnviarDados.UseVisualStyleBackColor = true;
+            this.btnEnviarDados.Click += new System.EventHandler(this.btnEnviarDados_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Location = new System.Drawing.Point(257, 13);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(569, 318);
+            this.tabControl1.TabIndex = 2;
+            // 
             // TerminalSerial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -644,13 +644,6 @@
             this.gBoxConfiguracao.ResumeLayout(false);
             this.gBoxConfiguracao.PerformLayout();
             this.gBoxConexao.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -659,6 +652,13 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -685,16 +685,6 @@
         private System.Windows.Forms.Button btnDesconectar;
         private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.Timer TimerRecepcao;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button btnApagarTXTRecepcao;
-        private System.Windows.Forms.Button ApagarTxTTransmissao;
-        private System.Windows.Forms.Button btnEnviarDados;
-        private System.Windows.Forms.TextBox txtEnviaDados;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtRecepcao;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtTransmissao;
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -716,6 +706,16 @@
         private System.Windows.Forms.RadioButton radioButton14;
         private System.Windows.Forms.RadioButton radioButton15;
         private System.Windows.Forms.RadioButton radioButton16;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button btnEnviarDados;
+        private System.Windows.Forms.TextBox txtEnviaDados;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnApagarTXTRecepcao;
+        private System.Windows.Forms.TextBox txtRecepcao;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtTransmissao;
+        private System.Windows.Forms.Button ApagarTxTTransmissao;
+        private System.Windows.Forms.TabControl tabControl1;
     }
 }
 

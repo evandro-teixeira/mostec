@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-org.eclipse.rse.preferences.order.connections=EvandroTeixeira.Local
+org.eclipse.rse.preferences.order.connections=EvandroTeixeira.Local;EvandroTeixeira.FRDM-KL25Z-UART_FLASH_OpenSDA;EvandroTeixeira.FRDM-KL25Z-UART_FLASH_OpenSDA Target
