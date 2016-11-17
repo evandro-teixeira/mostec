@@ -8,7 +8,7 @@
  */
 #include "main.h"
 
-uint8_t i = 0;
+//uint8_t i = 0;
 uint32_t contador = 0;
 uint8_t maq_led = 0;
 uint64_t tempo_led = 0;
@@ -17,11 +17,11 @@ int main(void)
 {
 	//int counter = 0;
 	// Inicializa perifeicos
-	rgb_init();
+	/*rgb_init();
 	GREEN_OFF;
 	RED_OFF;
-	BLUE_OFF;
-	
+	BLUE_OFF;*/
+	gpio_direction(PORT_B,18,OUTPUT,NO_PULL_RESISTOR);
 	gpio_direction(PORT_C,1,OUTPUT,NO_PULL_RESISTOR);
 	
 	PIT_Init();
@@ -48,8 +48,8 @@ int main(void)
 	while(TRUE)
 	{
 		//entrada[i] = (uint8_t)Le_Entradas(i);
-	   	contador++;
-	   	if(contador >= 5000)
+	   	/*contador++;
+	   	if(contador >= 10000)
 	   	{
 	   		contador = 0;
 	   		entrada[i] = (bool)Le_Entradas(i);
@@ -59,12 +59,31 @@ int main(void)
 	   			i = 0;
 	   		}
 	   	}
-	   	
-	   	
+	   	*/
+		//Le_Entradas();	   	
 		Interpreter();
-		Controle_Aplicacao();
-		
-		
+		if(entrada[BOTAO_EMERGENCIA] == 1)
+		{
+			//Flags_Action(RESET_MAQ,RESET);
+			Controle_Aplicacao();
+			Flags_Action(RESET_MAQ,RESET);
+		}	
+		else
+		{
+			Flags_Action(RESET_MAQ,SET);
+			// Desliga esteira e bombas
+			Controle_Esteira(OFF,OFF);
+			Bomba_Mel(OFF);
+			Bomba_Energetico(OFF);
+			Bomba_Vodka(OFF);
+			Bomba_Corante(OFF);
+			put("\r\nBotao de Emergencia precionado");
+			contador++;
+			if(contador > 10000)
+			{
+				contador = 0;
+			}
+		}
 		/*counter++;
 		if(counter >= DLY)
 		{
@@ -73,7 +92,7 @@ int main(void)
 		}*/
 		switch(maq_led)
 		{
-			case 0:
+			/*case 0:
 				RED_ON;
 				tempo_led = Calcula_Tick(10);
 				maq_led = 1;
@@ -99,19 +118,21 @@ int main(void)
 					maq_led = 4;
 					GREEN_OFF;
 				}
-			break;	
+			break;*/	
 			
-			case 4:
-				BLUE_ON;
+			case 0:
+				//BLUE_ON;
+				gpio_set(PORT_B,18,ON);
 				tempo_led = Calcula_Tick(10);
-				maq_led = 5;
+				maq_led = 1;
 			break;
 			
-			case 5:
+			case 1:
 				if(Check_Tick(tempo_led) == TRUE)
 				{
 					maq_led = 0;
-					BLUE_OFF;
+					//BLUE_OFF;
+					gpio_set(PORT_B,18,OFF);
 				}
 			break;
 		}

@@ -33,11 +33,431 @@ void Inicializa_Entrada(void)
 /********************************************************************/
 //
 /********************************************************************/
-bool Le_Entradas(uint8_t ch)
+//bool Le_Entradas(uint8_t ch)
+void Le_Entradas(void)
 {
-	uint16_t i =0;
-	
+	static uint16_t i = 0;
+	static uint8_t st = 0;
+	static uint8_t ch = 0;
 	switch(ch)
+	{
+		//***********************************************************
+		case 0:
+			switch(st)
+			{
+				case 0:
+					gpio_set(PORT_D,4,ON); // EN
+					gpio_set(PORT_A,5,OFF);	// A
+					gpio_set(PORT_A,4,OFF); // B
+					gpio_set(PORT_A,12,OFF); // C
+					//i++;
+					//if(i>=1000)
+					//{
+					//	i = 0;
+						st = 1;
+					//}
+				break;
+				case 1:
+					gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 2;
+					//}
+				break;
+				case 2:
+					//gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 0;
+						ch = 1;
+						//entrada[i] = (bool)
+						if(gpio_read(PORT_D,5))
+						{
+							//return TRUE;
+							entrada[i] = 1;
+						}
+						else
+						{
+							//return FALSE;
+							entrada[i] = 0;
+						}
+						i++;
+						gpio_set(PORT_D,4,ON); // EN
+					//}
+				break;
+			}
+		break;	
+		//***********************************************************
+		//
+		//***********************************************************
+		case 1:
+			switch(st)
+			{
+				case 0:
+					gpio_set(PORT_D,4,ON); // EN
+					gpio_set(PORT_A,5,ON);	// A
+					gpio_set(PORT_A,4,OFF); // B
+					gpio_set(PORT_A,12,OFF); // C
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 1;
+					//}
+				break;
+				case 1:
+					gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 2;
+					//}
+				break;
+				case 2:
+					//gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 0;
+						ch = 2;
+						//entrada[i] = (bool)
+						if(gpio_read(PORT_D,5))
+						{
+							//return TRUE;
+							entrada[i] = 1;
+						}
+						else
+						{
+							//return FALSE;
+							entrada[i] = 0;
+						}
+						i++;
+						gpio_set(PORT_D,4,ON); // EN
+					//}
+				break;
+			}
+		break;
+		//***********************************************************
+		//
+		//***********************************************************
+		case 2:
+			switch(st)
+			{
+				case 0:
+					gpio_set(PORT_D,4,ON); // EN
+					gpio_set(PORT_A,5,OFF);	// A
+					gpio_set(PORT_A,4,ON); // B
+					gpio_set(PORT_A,12,OFF); // C
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 1;
+					//}
+				break;
+				case 1:
+					gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 2;
+					//}
+				break;
+				case 2:
+					//gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 0;
+						ch = 3;
+						//entrada[i] = (bool)
+						if(gpio_read(PORT_D,5))
+						{
+							//return TRUE;
+							entrada[i] = 1;
+						}
+						else
+						{
+							//return FALSE;
+							entrada[i] = 0;
+						}
+						i++;
+						gpio_set(PORT_D,4,ON); // EN
+					//}
+				break;
+			}
+		break;
+		//***********************************************************
+		//
+		//***********************************************************
+		case 3:
+			switch(st)
+			{
+				case 0:
+					gpio_set(PORT_D,4,ON); // EN
+					gpio_set(PORT_A,5,ON);	// A
+					gpio_set(PORT_A,4,ON); // B
+					gpio_set(PORT_A,12,OFF); // C
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 1;
+					//}
+				break;
+				case 1:
+					gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 2;
+					//}
+				break;
+				case 2:
+					//gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 0;
+						ch = 4;
+						//entrada[i] = (bool)
+						if(gpio_read(PORT_D,5))
+						{
+							//return TRUE;
+							entrada[i] = 1;
+						}
+						else
+						{
+							//return FALSE;
+							entrada[i] = 0;
+						}
+						i++;
+						gpio_set(PORT_D,4,ON); // EN
+					//}
+				break;
+			}
+		break;
+		//***********************************************************
+		//
+		//***********************************************************
+		case 4:
+			switch(st)
+			{
+				case 0:
+					gpio_set(PORT_D,4,ON); // EN
+					gpio_set(PORT_A,5,OFF);	// A
+					gpio_set(PORT_A,4,OFF); // B
+					gpio_set(PORT_A,12,ON); // C
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 1;
+					//}
+				break;
+				case 1:
+					gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 2;
+					//}
+				break;
+				case 2:
+					//gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 0;
+						ch = 5;
+						//entrada[i] = (bool)
+						if(gpio_read(PORT_D,5))
+						{
+							//return TRUE;
+							entrada[i] = 1;
+						}
+						else
+						{
+							//return FALSE;
+							entrada[i] = 0;
+						}
+						i++;
+						gpio_set(PORT_D,4,ON); // EN
+					//}
+				break;
+			}
+		break;
+		//***********************************************************
+		//
+		//***********************************************************
+		case 5:
+			switch(st)
+			{
+				case 0:
+					gpio_set(PORT_D,4,ON); // EN
+					gpio_set(PORT_A,5,ON);	// A
+					gpio_set(PORT_A,4,OFF); // B
+					gpio_set(PORT_A,12,ON); // C
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 1;
+					//}
+				break;
+				case 1:
+					gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 2;
+					//}
+				break;
+				case 2:
+					//gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 0;
+						ch = 6;
+						//entrada[i] = (bool)
+						if(gpio_read(PORT_D,5))
+						{
+							//return TRUE;
+							entrada[i] = 1;
+						}
+						else
+						{
+							//return FALSE;
+							entrada[i] = 0;
+						}
+						i++;
+						gpio_set(PORT_D,4,ON); // EN
+					//}
+				break;
+			}
+		break;
+		//***********************************************************
+		//
+		//***********************************************************
+		case 6:
+			switch(st)
+			{
+				case 0:
+					gpio_set(PORT_D,4,ON); // EN
+					gpio_set(PORT_A,5,OFF);	// A
+					gpio_set(PORT_A,4,ON); // B
+					gpio_set(PORT_A,12,ON); // C
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 1;
+					//}
+				break;
+				case 1:
+					gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 2;
+					//}
+				break;
+				case 2:
+					//gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 0;
+						ch = 7;
+						//entrada[i] = (bool)
+						if(gpio_read(PORT_D,5))
+						{
+							//return TRUE;
+							entrada[i] = 1;
+						}
+						else
+						{
+							//return FALSE;
+							entrada[i] = 0;
+						}
+						i++;
+						gpio_set(PORT_D,4,ON); // EN
+					//}
+				break;
+			}
+		break;
+		//***********************************************************
+		//
+		//***********************************************************
+		case 7:
+			switch(st)
+			{
+				case 0:
+					gpio_set(PORT_D,4,ON); // EN
+					gpio_set(PORT_A,5,ON);	// A
+					gpio_set(PORT_A,4,ON); // B
+					gpio_set(PORT_A,12,ON); // C
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 1;
+					//}
+				break;
+				case 1:
+					gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 2;
+					//}
+				break;
+				case 2:
+					//gpio_set(PORT_D,4,OFF); // EN
+					//i++;
+					//if(i>1000)
+					//{
+					//	i = 0;
+						st = 0;
+						ch = 0;
+						//entrada[i] = (bool)
+						if(gpio_read(PORT_D,5))
+						{
+							//return TRUE;
+							entrada[i] = 1;
+						}
+						else
+						{
+							//return FALSE;
+							entrada[i] = 0;
+						}
+						i = 0;
+						gpio_set(PORT_D,4,ON); // EN
+					//}
+				break;
+			}
+		break;
+	}
+	
+	/*switch(ch)
 	{
 		case 0:
 			gpio_set(PORT_A,5,OFF);	// A
@@ -197,7 +617,7 @@ bool Le_Entradas(uint8_t ch)
 			gpio_set(PORT_A,12,OFF); // C
 			gpio_set(PORT_D,4,ON);  // EN
 		break;	
-	}
+	}*/
 }
 /********************************************************************/
 //
@@ -418,159 +838,285 @@ void Controle_Aplicacao(void)
 	static uint8_t maq_estado = 0;
 	static uint64_t tempo = 0;
 	
+	if( Flag_Check(RESET_MAQ) == TRUE )
+	{
+		tempo = 0;
+		maq_estado = 0;
+		estado_aplicacao = 0;
+		Flags_Action( INICIA_PROCESSO,RESET );
+		Flags_Action( POSITION,RESET );
+		Change_Machine_Status( PARADO );
+	}
+	
 	switch(estado_aplicacao)
 	{
 		case STOP:
+#if CONTROLE_TEMPO			
 			//put("\r\n Estado parado ");
-			//if((Flag_Check(POSITION) == TRUE) && // Checa se o copo esta posição inicial
-			//   (Flag_Check(ERRO_INT) == FALSE))  // e checa se não ha erro
-			//{
+			if((Flag_Check(POSITION) == TRUE) && // Checa se o copo esta posição inicial
+			   (Flag_Check(ERRO_INT) == FALSE))  // e checa se não ha erro
+			{
+#endif			
 				if( Flag_Check( INICIA_PROCESSO ) == TRUE )
 				{
 					// Reset flag
 					put("\r\nInicia processo");
 					Flags_Action( INICIA_PROCESSO,RESET );
+					Flags_Action( POSITION,RESET );
 					Change_Machine_Status( EXECUTANDO );
 					estado_aplicacao = RUNNING;
 				}
-			//}
-			/*
+#if CONTROLE_TEMPO
+			}
 			else // se o copo não estiver na posição inicial, deve posicionar o mesmo
 			{
 				// muda para estado 
 				estado_aplicacao = POSITIONING;
-			}*/
+			}
+#endif			
 		break;
 		
 		case RUNNING:
+#if CONTROLE_TEMPO			
 			// Checa se as chaves fim de curso
-			//if((entrada[FIM_CURSO_1] == 1) &&
-			//   (entrada[FIM_CURSO_2] == 1) )
-			//{
+			if((entrada[FIM_CURSO_1] == 1) &&
+			   (entrada[FIM_CURSO_2] == 1) )
+			{
+#endif			
 				switch(maq_estado)
 				{
+					//***************************************************************
 					case 0:
-						put("\r\nLiga Bomba de Mel");
-						
-						Bomba_Mel(ON);// Liga Bomba de MEL
-						tempo = Calcula_Tick(TEMPO_BOMBA_MEL); // inicia contagem de tempo em segundos
-						maq_estado = 1;
-					break;
-					
-					case 1:
-						if(Check_Tick(tempo) == TRUE)
-						{
-							put("\r\nDesliga Bomba de Mel");
-							Bomba_Mel(OFF);// Liga Bomba de MEL
-							maq_estado = 2;
-						}
-					break;
-					
-					case 2: // liga esteira
 						put("\r\nLiga Esteira");
 						Controle_Esteira( ON , RIGHT);
-						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo em segundos
-						maq_estado = 3;
-					break;	
-					
-					case 3:
+#if( CONTROLE_TEMPO == 0)						
+						tempo = Calcula_Tick(TEMPO_BOMBA_MEL); // inicia contagem de tempo em segundos
+#endif						
+						maq_estado = 1;
+					break;
+					//***************************************************************
+					//
+					//***************************************************************
+					case 1:
+#if CONTROLE_TEMPO	
+						if(entrada[POSICAO_MEL] == 0)
+						{						
+							put("\r\nDesliga Esteira");
+							Controle_Esteira( OFF , OFF); // desliga esteira
+							maq_estado = 2;
+						}
+#else
 						if(Check_Tick(tempo) == TRUE)
 						{
 							put("\r\nDesliga Esteira");
 							Controle_Esteira( OFF , OFF); // desliga esteira
-							maq_estado = 4;
+							maq_estado = 2;
 						}
+#endif					
+					break;	
+					//***************************************************************
+					//
+					//***************************************************************
+					case 2:
+						put("\r\nLiga Bomba de Mel");						
+						Bomba_Mel(ON);// Liga Bomba de MEL
+						tempo = Calcula_Tick(TEMPO_BOMBA_MEL); // inicia contagem de tempo em segundos
+						maq_estado = 3;
 					break;
-					
-					case 4:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 3:
+						if(Check_Tick(tempo) == TRUE)
+						{
+							put("\r\nDesliga Bomba de Mel");
+							Bomba_Mel(OFF);// Liga Bomba de MEL
+							maq_estado = 4;
+						}	
+					break;
+					//***************************************************************
+					//
+					//***************************************************************
+					case 4: // liga esteira
+						put("\r\nLiga Esteira");
+						Controle_Esteira( ON , RIGHT);
+#if( CONTROLE_TEMPO == 0)						
+						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo em segundos
+#endif						
+						maq_estado = 5;
+					break;	
+					//***************************************************************
+					//
+					//***************************************************************
+					case 5:
+#if CONTROLE_TEMPO			
+						if(entrada[POSICAO_VODKA] == 0)
+						{						
+							put("\r\nDesliga Esteira");
+							Controle_Esteira( OFF , OFF); // desliga esteira
+							maq_estado = 6;
+						}
+#else						
+						if(Check_Tick(tempo) == TRUE)
+						{
+							put("\r\nDesliga Esteira");
+							Controle_Esteira( OFF , OFF); // desliga esteira
+							maq_estado = 6;
+						}
+#endif						
+					break;
+					//***************************************************************
+					//
+					//***************************************************************
+					case 6:
 						put("\r\nLiga Bomba de Vodka");
 						Bomba_Vodka(ON);// Liga Bomba de Vodka
 						tempo = Calcula_Tick(TEMPO_BOMBA_VODKA); // inicia contagem de tempo
-						maq_estado = 5;
+						maq_estado = 7;
 					break;
-					
-					case 5:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 7:
 						if(Check_Tick(tempo) == TRUE)
 						{
 							put("\r\nDesliga Bomba de Vodka");
 							Bomba_Vodka(OFF);// Liga Bomba de Vodka
-							maq_estado = 6;
+							maq_estado = 8;
 						}
 					break;
-					
-					case 6:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 8:
 						put("\r\nLiga de Esteira");
 						Controle_Esteira( ON , RIGHT);
+#if( CONTROLE_TEMPO == 0)						
 						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo em segundos
-						maq_estado = 7;
+#endif						
+						maq_estado = 9;
 					break;	
-					
-					case 7:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 9:
+#if CONTROLE_TEMPO
+						if(entrada[POSICAO_ENERGETICO] == 0)
+						{
+							put("\r\nDesliga Esteira");
+							Controle_Esteira( OFF , OFF);
+							maq_estado = 10;
+						}
+#else						
 						if(Check_Tick(tempo) == TRUE)
 						{
 							put("\r\nDesliga Esteira");
 							Controle_Esteira( OFF , OFF);
-							maq_estado = 8;
+							maq_estado = 10;
 						}
+#endif						
 					break;	
-					
-					case 8:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 10:
 						put("\r\nLiga Bomba de Esteira");
 						Bomba_Energetico( ON );
 						tempo = Calcula_Tick(TEMPO_BOMBA_ENERGETICO); // inicia contagem de tempo em segundos 
-						maq_estado = 9;
+						maq_estado = 11;
 					break;	
-					
-					case 9:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 11:
 						if(Check_Tick(tempo) == TRUE)
 						{
 							put("\r\nDesliga Bomba de Energetico");
 							Bomba_Energetico( OFF );
-							maq_estado = 10;
+							maq_estado = 12;
 						}
 					break;	
-					
-					case 10:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 12:
 						put("\r\nLiga Esteira");
 						Controle_Esteira( ON , RIGHT);
+#if( CONTROLE_TEMPO == 0)						
 						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo em segundos
-						maq_estado = 11;
+#endif						
+						maq_estado = 13;
 					break;	
-					
-					case 11:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 13:
+#if CONTROLE_TEMPO	
+						if(entrada[POSICAO_CORANTE] == 0)
+						{
+							put("\r\nDesliga Esteira");
+							Controle_Esteira( OFF, OFF );
+							maq_estado = 14;
+						}
+#else						
 						if(Check_Tick(tempo) == TRUE)
 						{
 							put("\r\nDesliga Esteira");
 							Controle_Esteira( OFF, OFF );
-							maq_estado = 12;
+							maq_estado = 14;
 						}
+#endif						
 					break;	
-					
-					case 12:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 14:
 						put("\r\nLiga Bomba de Corante");
 						Bomba_Corante(ON);
 						tempo = Calcula_Tick(TEMPO_BOMBA_CORANTE); // inicia contagem de tempo em segundos
-						maq_estado = 13;
+						maq_estado = 15;
 					break;	
-					
-					case 13:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 15:
 						if(Check_Tick(tempo) == TRUE)
 						{
 							put("\r\nDesliga Corante");
 							Bomba_Corante(OFF);
-							maq_estado = 14;
+							maq_estado = 16;
 						}
 					break;	
-					
-					case 14:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 16:
 						put("\r\nLiga Esteira ");
 						put("\r\nRetorna posição inicial");
 						Controle_Esteira( ON , LEFT);
+#if( CONTROLE_TEMPO == 0)						
 						tempo = Calcula_Tick(TEMPO_ESTEIRA_TOTAL); // inicia contagem de tempo em segundos
-						maq_estado = 15;
+#endif						
+						maq_estado = 17;
 					break;
-					
-					case 15:
+					//***************************************************************
+					//
+					//***************************************************************
+					case 17:
+#if CONTROLE_TEMPO		
+						if(entrada[POSICAO_INICIAL] == 0)
+						{
+							put("\r\nDesliga Esteira");
+							put("\r\nPosição Inicial");
+							Controle_Esteira( OFF , OFF);
+							maq_estado = 0;
+							estado_aplicacao = STOP;
+							
+							Change_Machine_Status( OK );
+							
+							Flags_Action(FIM_PROCESSO,SET);
+						}
+#else						
 						if(Check_Tick(tempo) == TRUE)
 						{
 							put("\r\nDesliga Esteira");
@@ -583,17 +1129,26 @@ void Controle_Aplicacao(void)
 							
 							Flags_Action(FIM_PROCESSO,SET);
 						}
+#endif						
 					break;	
 				}
-			//}
-			/*	
+#if CONTROLE_TEMPO				
+			}	
 			else // caso algumas da chaves seja acionadas deve desligar a esteira e set a flag de erro
 			{
+				put("\r\nDesliga Esteira");
+				put("\r\nErro na posicionamento");
 				// desliga Esteira
 				Controle_Esteira(OFF,OFF);
+				// Desliga as bombas
+				Bomba_Mel(OFF);
+				Bomba_Energetico(OFF);
+				Bomba_Vodka(OFF);
+				Bomba_Corante(OFF);
 				// Set flag que sinaliza erro
-				Flags_Action(ERRO_INT,SET);
-			}*/
+				//Flags_Action(ERRO_INT,SET);
+			}
+#endif				
 		break;	
 		
 		case POSITIONING:
@@ -613,12 +1168,14 @@ void Controle_Aplicacao(void)
 				{
 					// Set FLag que sinaliza que o copo esta na posição correta
 					Flags_Action(POSITION,SET);
+					// muda para o estado stop
+					estado_aplicacao = STOP;
 				}
-				else
+				/*else
 				{
 					// caso contrario Set flag que sinaliza erro
 					Flags_Action(ERRO_INT,SET);
-				}
+				}*/
 			}			
 		break;	
 	}

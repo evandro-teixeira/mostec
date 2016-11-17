@@ -31,7 +31,10 @@ void PIT_IRQHandler()
 	
 	PIT_TFLG0 |= PIT_TFLG_TIF_MASK;		// Clear the PIT interrupt flag	
    	//Toggle Green LED
-   	//GPIOB_PTOR = (1 << 19);  
+   	//GPIOB_PTOR = (1 << 19);
+	
+	Le_Entradas();
+	
 	counter++;
 	if(counter >= 12000)
 	{
