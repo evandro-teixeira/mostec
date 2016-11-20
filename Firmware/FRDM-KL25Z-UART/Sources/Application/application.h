@@ -12,7 +12,7 @@
 #include "main.h"
 
 //metodo de controle
-#define CONTROLE_TEMPO	1 	// 1 Controle baseado em tempo
+#define CONTROLE_TEMPO	0 	// 1 Controle baseado em tempo
 							// 0 Controle orientado pelas chaves
 
 #define RIGHT 0
@@ -46,14 +46,16 @@
 #define FIM_CURSO_1    		6
 #define FIM_CURSO_2			7
 
-#define TEMPO_BOMBA_MEL			30 // segundos
-#define TEMPO_BOMBA_VODKA		30 // segundos
-#define TEMPO_BOMBA_ENERGETICO 	30 // segundos
-#define TEMPO_BOMBA_CORANTE		30 // segundos
-#define TEMPO_ESTEIRA_STEP		120 // segundos
-#define TEMPO_ESTEIRA_TOTAL		240 // segundos
+#define TEMPO_BOMBA_MEL			5 // segundos
+#define TEMPO_BOMBA_VODKA		5 // segundos
+#define TEMPO_BOMBA_ENERGETICO 	5 // segundos
+#define TEMPO_BOMBA_CORANTE		5 // segundos
+#define TEMPO_ESTEIRA_STEP		10 // segundos
+#define TEMPO_ESTEIRA_TOTAL		10 // segundos
 
 #define TEMPO_MUX   1000
+
+#define DELAY		1000
 
 uint8_t data_tx[8]; 
 uint8_t data_rx[8];

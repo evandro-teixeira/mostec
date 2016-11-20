@@ -60,15 +60,15 @@ int main(void)
 	   		}
 	   	}
 	   	*/
-		//Le_Entradas();	   	
+		Le_Entradas();	   	
 		Interpreter();
-		if(entrada[BOTAO_EMERGENCIA] == 1)
-		{
+		//if(entrada[BOTAO_EMERGENCIA] == 1)
+		//{
 			//Flags_Action(RESET_MAQ,RESET);
 			Controle_Aplicacao();
-			Flags_Action(RESET_MAQ,RESET);
-		}	
-		else
+			//Flags_Action(RESET_MAQ,RESET);
+		//}	
+		/*else
 		{
 			Flags_Action(RESET_MAQ,SET);
 			// Desliga esteira e bombas
@@ -83,7 +83,7 @@ int main(void)
 			{
 				contador = 0;
 			}
-		}
+		}*/
 		/*counter++;
 		if(counter >= DLY)
 		{

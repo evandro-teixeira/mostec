@@ -837,6 +837,7 @@ void Controle_Aplicacao(void)
 	static uint8_t estado_aplicacao = 0;
 	static uint8_t maq_estado = 0;
 	static uint64_t tempo = 0;
+	uint32_t t = 0;
 	
 	if( Flag_Check(RESET_MAQ) == TRUE )
 	{
@@ -888,7 +889,7 @@ void Controle_Aplicacao(void)
 					//***************************************************************
 					case 0:
 						put("\r\nLiga Esteira");
-						Controle_Esteira( ON , RIGHT);
+						Controle_Esteira( ON , LEFT);///RIGHT);
 #if( CONTROLE_TEMPO == 0)						
 						tempo = Calcula_Tick(TEMPO_BOMBA_MEL); // inicia contagem de tempo em segundos
 #endif						
@@ -918,6 +919,7 @@ void Controle_Aplicacao(void)
 					//
 					//***************************************************************
 					case 2:
+						for(t=0;t<DELAY;t++);//delay
 						put("\r\nLiga Bomba de Mel");						
 						Bomba_Mel(ON);// Liga Bomba de MEL
 						tempo = Calcula_Tick(TEMPO_BOMBA_MEL); // inicia contagem de tempo em segundos
@@ -938,8 +940,9 @@ void Controle_Aplicacao(void)
 					//
 					//***************************************************************
 					case 4: // liga esteira
+						for(t=0;t<DELAY;t++);//delay
 						put("\r\nLiga Esteira");
-						Controle_Esteira( ON , RIGHT);
+						Controle_Esteira( ON , LEFT);//RIGHT);
 #if( CONTROLE_TEMPO == 0)						
 						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo em segundos
 #endif						
@@ -969,6 +972,7 @@ void Controle_Aplicacao(void)
 					//
 					//***************************************************************
 					case 6:
+						for(t=0;t<DELAY;t++);//delay
 						put("\r\nLiga Bomba de Vodka");
 						Bomba_Vodka(ON);// Liga Bomba de Vodka
 						tempo = Calcula_Tick(TEMPO_BOMBA_VODKA); // inicia contagem de tempo
@@ -989,8 +993,9 @@ void Controle_Aplicacao(void)
 					//
 					//***************************************************************
 					case 8:
+						for(t=0;t<DELAY;t++);//delay
 						put("\r\nLiga de Esteira");
-						Controle_Esteira( ON , RIGHT);
+						Controle_Esteira( ON , LEFT);//RIGHT);
 #if( CONTROLE_TEMPO == 0)						
 						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo em segundos
 #endif						
@@ -1020,6 +1025,7 @@ void Controle_Aplicacao(void)
 					//
 					//***************************************************************
 					case 10:
+						for(t=0;t<DELAY;t++);//delay
 						put("\r\nLiga Bomba de Esteira");
 						Bomba_Energetico( ON );
 						tempo = Calcula_Tick(TEMPO_BOMBA_ENERGETICO); // inicia contagem de tempo em segundos 
@@ -1040,8 +1046,9 @@ void Controle_Aplicacao(void)
 					//
 					//***************************************************************
 					case 12:
+						for(t=0;t<DELAY;t++);//delay
 						put("\r\nLiga Esteira");
-						Controle_Esteira( ON , RIGHT);
+						Controle_Esteira( ON , LEFT);//RIGHT);
 #if( CONTROLE_TEMPO == 0)						
 						tempo = Calcula_Tick(TEMPO_ESTEIRA_STEP); // inicia contagem de tempo em segundos
 #endif						
@@ -1071,6 +1078,7 @@ void Controle_Aplicacao(void)
 					//
 					//***************************************************************
 					case 14:
+						for(t=0;t<DELAY;t++);//delay
 						put("\r\nLiga Bomba de Corante");
 						Bomba_Corante(ON);
 						tempo = Calcula_Tick(TEMPO_BOMBA_CORANTE); // inicia contagem de tempo em segundos
@@ -1091,9 +1099,10 @@ void Controle_Aplicacao(void)
 					//
 					//***************************************************************
 					case 16:
+						for(t=0;t<DELAY;t++);//delay
 						put("\r\nLiga Esteira ");
 						put("\r\nRetorna posição inicial");
-						Controle_Esteira( ON , LEFT);
+						Controle_Esteira( ON , RIGHT);//LEFT);
 #if( CONTROLE_TEMPO == 0)						
 						tempo = Calcula_Tick(TEMPO_ESTEIRA_TOTAL); // inicia contagem de tempo em segundos
 #endif						
